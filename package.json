@@ -13,5 +13,8 @@
     "backend"
   ],
   "author": "Rahul Maity",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "prettier": "^3.1.1"
+  }
 }
