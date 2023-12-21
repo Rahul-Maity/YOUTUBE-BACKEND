@@ -1,0 +1,16 @@
+{
+  "editor.letterSpacing": 0.8,
+  // "editor.fontWeight": "578",
+  "editor.fontWeight": "normal",
+  // "editor.fontVariations": false,
+  "editor.suggestFontSize": 12,
+
+  "editor.fontFamily": "cascadia code,fira code,Consolas, Liberation Mono, monospace",
+
+  "editor.fontSize": 14,
+  // "editor.lineDecorationsWidth": 10,
+  "editor.fontLigatures": true,
+  "editor.lineHeight": 1.46,
+  "editor.codeLens": true,
+  "editor.colorDecorators": true
+}
