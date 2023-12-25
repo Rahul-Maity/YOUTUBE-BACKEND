@@ -15,12 +15,12 @@ const registerUser = asyncHandler(async (req, res) => {
     //remove password and refresh token field from response
     //check for user creation
     //return res
-    const { fullName, email, username, password } = req.body;
+    const { fullname, email, username, password } = req.body;
     console.log("email :", email);
-    if ([fullName, email, username, password].some((field) => field?.trim() === "")) {
+    if ([fullname, email, username, password].some((field) => field?.trim() === "")) {
         throw new apiError(400,"All fields are required")
     }
-    const existedUser=User.findOne({
+    const existedUser= await User.findOne({
         $or:[{username},{email}]
     })
     if (existedUser) {
@@ -38,7 +38,7 @@ const registerUser = asyncHandler(async (req, res) => {
            throw new apiError(400,"Avatar file is required")
     }
     const user=await User.create({
-        fullName,
+        fullname,
         avatar: avatar.url,
         coverImage: coverImage?.url || "",
         email,
